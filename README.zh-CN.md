@@ -3,7 +3,7 @@
 [English](README.md) | **中文**
 
 CuedKit 是一套低成本的开源机械手和机械臂套件，可以打出**普通话线索语**（Mandarin Cued Speech），
-并配有中英双语的网络课程，教你学会它。
+并配有网络课程，教你学会它。
 
 CuedKit 专为教育而做：机械手做出手型，机械臂移动到相应的位置，课程则一步一步地教你手型、位置和发音。
 整个网站和课程都提供中文界面，面向说普通话的学习者。
@@ -29,15 +29,9 @@ CuedKit 专为教育而做：机械手做出手型，机械臂移动到相应的
 电子元件：Arduino Uno、PCA9685 舵机驱动板、6 个 MG90S 舵机（手）、
 3 个 RDS3225 舵机（手臂）、5V 电源、导线。
 
-## 运行网站
+## 使用网站
 
-网站是静态的。在 `docs/` 文件夹里运行：
-
-```bash
-python3 -m http.server 8000
-```
-
-然后在电脑上用 **Google Chrome 或 Microsoft Edge** 打开 <http://localhost:8000>。
+在电脑上用 **Google Chrome 或 Microsoft Edge** 打开 <https://floracao111.github.io/cuedkit/index.html>。
 连接机械手使用的是 Web Serial API，Safari、Firefox 和手机浏览器都不支持。
 
 ## 上传 Arduino 程序

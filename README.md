@@ -3,7 +3,7 @@
 **English** | [中文](README.zh-CN.md)
 
 A low-cost, open-source robotic hand and arm kit that performs Mandarin Cued Speech,
-with a bilingual (中文 / English) web course that teaches it.
+with a web course that teaches it.
 
 CuedKit is built for education: the hand shows the handshape, the arm moves to the
 position, and the course teaches the handshapes, positions and sounds step by step.
@@ -33,15 +33,9 @@ and Assembly pages.
 Electronics: Arduino Uno, PCA9685 servo driver board, 6 × MG90S servos (hand),
 3 × RDS3225 servos (arm), 5V power supply, wires.
 
-## Run the website
+## Use the website
 
-The website is static. From the `docs/` folder:
-
-```bash
-python3 -m http.server 8000
-```
-
-Open <http://localhost:8000> in **Google Chrome or Microsoft Edge** on a desktop computer.
+Open <https://floracao111.github.io/cuedkit/index.html> in **Google Chrome or Microsoft Edge** on a desktop computer.
 Connecting to the hand uses the Web Serial API, which Safari, Firefox and mobile browsers
 do not support.
 
