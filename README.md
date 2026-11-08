@@ -10,6 +10,21 @@ position, and the course teaches the handshapes, positions and sounds step by st
 The whole website and course are available in Chinese, because the kit is made for
 Mandarin-speaking learners.
 
+## Contributions
+
+- **An open encoding of Mandarin Cued Speech for a robot.** The code turns Chinese
+  characters or pinyin into cues: each syllable becomes one of 8 handshapes and one of
+  5 positions. The same rules run in the browser (`docs/js/encoder.js`) and on the
+  Arduino (`arduino/cuedkit-speech/`), and a script checks that the two agree on every
+  syllable of 3,755 common characters.
+- **A hand and arm that perform it.** An original palm holds five fingers and six servos,
+  with an index finger that also moves sideways. A three-servo arm moves the hand to the
+  five positions around the face. One Arduino Uno and one servo driver board run it all.
+- **A course that uses the robot to teach.** Thirteen lessons run in the browser and
+  drive the hand over USB, so learners see each handshape and position as they study it.
+- **A kit others can build and reuse.** Parts list, assembly videos, firmware and arm
+  models are published, and the kit is sold at the cost of materials.
+
 ## What is in this repository
 
 | Folder | What it is | License |
