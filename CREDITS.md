@@ -2,7 +2,7 @@
 
 ## Hand design
 The finger mechanism of the printed hand is adapted from
-[Overengineered Mechanical Hand V2](https://makerworld.com/@user_940602127) by **TLPOD**
+[Overengineered Mechanical Hand V2](https://makerworld.com/en/models/1772809-overengineered-mechanical-hand-v2-4-fingers#profileId-1887602) by **[TLPOD](https://makerworld.com/@user_940602127)**
 on MakerWorld. Printed hands in CuedKit are made under TLPOD's MakerWorld commercial
 printing license. That license does not allow sharing the original files or derivatives,
 so no hand or finger model files are included in this repository.
@@ -28,8 +28,8 @@ licenses.
 ## 致谢（中文）
 
 ### 手部设计
-打印手的手指机构改编自 MakerWorld 上 **TLPOD** 的
-[Overengineered Mechanical Hand V2](https://makerworld.com/@user_940602127)。
+打印手的手指机构改编自 MakerWorld 上 **[TLPOD](https://makerworld.com/@user_940602127)** 的
+[Overengineered Mechanical Hand V2](https://makerworld.com/en/models/1772809-overengineered-mechanical-hand-v2-4-fingers#profileId-1887602)。
 CuedKit 的手在 TLPOD 的 MakerWorld 商业打印授权下制作。该授权不允许分享原文件及其衍生文件，
 因此本仓库不包含任何手或手指的模型文件。
 
