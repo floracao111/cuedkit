@@ -17,6 +17,7 @@ window.I18N_EN = {
   'stepper.use': 'Course',
 
   'download.title': 'Get Your Kit',
+  'download.price': '$50, sold at cost (about ¥330)',
   'download.orderButton': 'Order',
   'download.continueButton': 'Continue to Hand Assembly',
 
@@ -79,7 +80,7 @@ window.I18N_EN = {
   'faq.q3': 'Where are the assembly instructions and the parts list?',
   'faq.a3': 'On the Kit page you will find the parts list, the face sheet to print and the Arduino code. The Hand assembly and Arm assembly pages show every step in short videos. Start from Get Started.',
   'faq.q4': 'What is in the kit, and how do I get one?',
-  'faq.a4': 'The kit has everything you need: the 3D-printed hand and arm, the servos, the Arduino and the driver board, the wires and the power supply. I print, pack and send it to you. Press Order on the Kit page to get one.',
+  'faq.a4': 'The kit has everything you need: the 3D-printed hand and arm, the servos, the Arduino and the driver board, the wires and the power supply. I print, pack and send it to you. It is sold at cost for $50 (about ¥330). Press Order on the Kit page to get one.',
 
   'contact.title': 'Contact',
   'contact.intro': 'Questions, feedback, or bug reports are welcome.',
