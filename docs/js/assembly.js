@@ -3,15 +3,16 @@
 // Clip N of a section lives at assembly-videos/<prefix>NN.mp4 (poster: <prefix>NN.jpg),
 // e.g. hand-01.mp4, arm-01.mp4. Numbering restarts in each section.
 // To describe a clip, fill in its caption ({ en, zh }). Order = order on the page.
-// Optional actions add buttons under the caption: [{ href | image, label: { en, zh } }, ...].
-//   href  -> link to another page;  image -> opens that image in a pop-up.
+// Optional actions add buttons under the caption: [{ href | image | note, label: { en, zh } }, ...].
+//   href  -> link to another page;  image -> opens that image in a pop-up;
+//   note  -> opens a pop-up with a short message (use it while an image is under construction).
 
 const ASSEMBLY_VIDEO_DIR = 'assembly-videos/';
 
 const HAND_VIDEOS = [
   { caption: { en: 'Cut the horns shorter with a plier.', zh: '用钳子把摇臂剪短。' } }, // 1
-  { caption: { en: 'Run a fishing line through the last two holes on the servo horn.', zh: '取一根鱼线，穿过舵机摇臂的最后两个孔。' } }, // 2
-  { caption: { en: 'Thread the fishing line through the hole of the finger pulley as shown in the video.', zh: '如视频所示，把鱼线穿过手指滑轮上的孔。' } }, // 3
+  { caption: { en: 'Run a fishing line through the last two holes on the servo horn.', zh: '取一根钓鱼线或透明 PVC 线，穿过舵机摇臂的最后两个孔。' } }, // 2
+  { caption: { en: 'Thread the fishing line through the hole of the finger pulley as shown in the video.', zh: '如视频所示，把钓鱼线穿过手指滑轮上的孔。' } }, // 3
   { caption: { en: 'Tie a knot to connect the servo horn to the finger pulley.', zh: '打个结，把舵机摇臂和手指滑轮连接起来。' } }, // 4
   { caption: { en: 'Insert these four servo motors in the direction shown in the video.', zh: '按视频中的方向装入这四个舵机。' } }, // 5
   { caption: { en: "Insert these two servo motors in the direction shown in the video. They're flipped compared to the first four.", zh: '按视频中的方向装入这两个舵机。它们与前四个方向相反。' } }, // 6
@@ -20,7 +21,7 @@ const HAND_VIDEOS = [
     caption: { en: 'Pause the assembly here and calibrate. Run this code on the servos first to move every motor to the same starting position.', zh: '先在此暂停组装并进行校准。运行这段代码，让所有舵机回到同一个初始位置。' },
     actions: [
       { href: 'calibrate.html', label: { en: 'Get calibration code', zh: '获取校准代码' } },
-      { image: ASSEMBLY_VIDEO_DIR + 'pin-map.png', label: { en: 'See which pin', zh: '查看接线对应' } },
+      { note: { en: 'This image is under construction.', zh: '此图片建设中。' }, label: { en: 'See which pin', zh: '查看接线对应' } },
     ],
   }, // 8
   { caption: { en: 'After calibration is done, attach the servo horns onto the servo motors.', zh: '校准完成后，把舵机摇臂装到舵机上。' } }, // 9
@@ -39,7 +40,7 @@ const ARM_VIDEOS = [
   {
     caption: { en: 'Connect the three big servo motors to pins 7 to 9.', zh: '把三个大舵机接到 7 至 9 号引脚上。' },
     actions: [
-      { image: ASSEMBLY_VIDEO_DIR + 'pin-map.png', label: { en: 'See which pin', zh: '查看接线对应' } },
+      { note: { en: 'This image is under construction.', zh: '此图片建设中。' }, label: { en: 'See which pin', zh: '查看接线对应' } },
     ],
   }, // 1
   { caption: { en: 'Put servo 7 into the slot in the arm base.', zh: '把 7 号舵机装入手臂底座的槽中。' } }, // 2
@@ -60,7 +61,7 @@ const HAND_KIT = [
   { en: '3D-printed hand', zh: '3D 打印的机械手' },
   { en: '3D-printed index finger', zh: '3D 打印的食指' },
   { en: 'MG90S servos, with their horns and screws', zh: 'MG90S 舵机（含摇臂和螺丝）' },
-  { en: 'Fishing line', zh: '鱼线' },
+  { en: 'Fishing line', zh: '钓鱼线或透明 PVC 线' },
   { en: 'Jumper wires (pin-to-socket)', zh: '杜邦线（公对母）' },
   { en: 'PCA9685 servo driver board', zh: 'PCA9685 舵机驱动板' },
   { en: 'Arduino Uno', zh: 'Arduino Uno' },
@@ -124,10 +125,10 @@ function buildMeta(item) {
     const row = el('div', 'video-actions');
     item.actions.forEach((action) => {
       const label = pick(action.label);
-      if (action.image) {
+      if (action.image || action.note) {
         const btn = el('button', 'btn btn-secondary btn-sm', label);
         btn.type = 'button';
-        btn.addEventListener('click', () => openImageDialog(action.image, label));
+        btn.addEventListener('click', () => openImageDialog(action.image || '', label, action.note ? pick(action.note) : ''));
         row.appendChild(btn);
       } else {
         const link = el('a', 'btn btn-secondary btn-sm', label);
@@ -202,7 +203,7 @@ function renderVideoCard(item, index, section) {
 }
 
 // One shared pop-up for images. Esc, the close button, or a click outside closes it.
-function openImageDialog(src, alt) {
+function openImageDialog(src, alt, note) {
   let dialog = document.getElementById('image-dialog');
   if (!dialog) {
     dialog = document.createElement('dialog');
@@ -217,6 +218,12 @@ function openImageDialog(src, alt) {
   close.type = 'button';
   close.setAttribute('aria-label', t('assembly.close'));
   close.addEventListener('click', () => dialog.close());
+
+  if (!src) {
+    dialog.append(close, el('div', 'image-dialog-empty', note || t('assembly.imageSoon')));
+    dialog.showModal();
+    return;
+  }
 
   const img = document.createElement('img');
   img.alt = alt;

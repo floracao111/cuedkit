@@ -9,7 +9,7 @@ const BOM = [
     { en: '3D-printed index finger', zh: '3D 打印的食指', qty: '1' },
     { en: 'MG90S servos', zh: 'MG90S 舵机', qty: '6', image: 'image/parts/mg90s.png' },
     { en: 'Jumper wires, pin-to-socket', zh: '杜邦线，公对母', qty: '18' },
-    { en: 'Fishing line', zh: '鱼线', qty: '' },
+    { en: 'Fishing line', zh: '钓鱼线或透明 PVC 线', qty: '' },
   ] },
   { group: { en: 'Arm', zh: '手臂' }, items: [
     { en: '3D-printed arm base', zh: '3D 打印的手臂底座', qty: '1' },
