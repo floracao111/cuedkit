@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>拼音表 — Alphabet</title>
+  <link rel="stylesheet" href="css/style.css?v=20261119">
+  <link rel="stylesheet" href="css/learn.css?v=20261119">
+  <script src="js/lang.js?v=20261119"></script>
+</head>
+<body class="center-page wide-page" data-step="alphabet">
+  <header class="site-header">
+    <a class="site-logo" href="index.html" aria-label="Cued Kit">Cued Kit</a>
+    <div class="header-actions">
+      <a class="header-link" href="use.html"><span class="zh">课程</span><span class="en">Course</span></a>
+      <a class="device-btn" href="connect.html"><span class="zh">连接</span><span class="en">Connect</span></a>
+    </div>
+  </header>
+
+  <nav id="learn-nav" class="stepper"></nav>
+
+  <main>
+    <div class="hero">
+      <h1 class="hero-title"><span class="zh">拼音表</span><span class="en">Alphabet</span></h1>
+    </div>
+
+    <div class="alpha" id="alpha">
+      <div id="alpha-status" class="alpha-status" role="status" aria-live="polite"></div>
+
+      <section>
+        <h2 class="alpha-heading"><span class="zh">声母</span><span class="en">Consonants</span></h2>
+        <div class="group-grid" id="alpha-hands"></div>
+        <p class="alpha-note"><span class="zh">∅ 表示没有声母的音节，比如 a、ai、an。</span><span class="en">∅ means a syllable with no consonant, like a, ai and an.</span></p>
+      </section>
+
+      <section>
+        <h2 class="alpha-heading"><span class="zh">韵母</span><span class="en">Vowels</span></h2>
+        <div class="vowel-layout">
+          <div class="group-grid" id="alpha-positions"></div>
+          <div class="face-panel" id="alpha-face"></div>
+        </div>
+      </section>
+
+      <a class="btn btn-lg" href="use.html" style="align-self:center;"><span class="zh">开始上课</span><span class="en">Start the course</span></a>
+    </div>
+  </main>
+
+  <script src="js/learn-nav.js?v=20261119"></script>
+  <script src="js/hand-ui.js?v=20261119"></script>
+  <script src="js/serial.js?v=20261119"></script>
+  <script src="js/encoder.js?v=20261119"></script>
+  <script src="js/curriculum.js?v=20261119"></script>
+  <script src="js/face-reference.js?v=20261119"></script>
+  <script src="js/alphabet.js?v=20261119"></script>
+</body>
+</html>

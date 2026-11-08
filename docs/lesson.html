@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>课程 — Course</title>
+  <link rel="stylesheet" href="css/style.css?v=20261119">
+  <link rel="stylesheet" href="css/learn.css?v=20261119">
+  <script src="js/lang.js?v=20261119"></script>
+</head>
+<body class="lesson-page">
+  <div class="lesson-shell">
+    <header class="lesson-top">
+      <a class="lesson-exit" href="use.html" aria-label="退出 Exit">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </a>
+      <div class="lesson-progress" role="progressbar" aria-label="进度 Progress">
+        <div id="lesson-bar" class="lesson-bar"></div>
+      </div>
+      <button type="button" id="hand-chip" class="hand-chip"></button>
+      <div class="header-actions"></div>
+    </header>
+
+    <main id="lesson-main" class="lesson-main"></main>
+
+    <footer id="lesson-foot" class="lesson-foot">
+      <div id="lesson-feedback" class="lesson-feedback" role="status" aria-live="polite" hidden></div>
+      <button type="button" id="lesson-action" class="btn lesson-action" data-mode="check" disabled></button>
+    </footer>
+  </div>
+
+  <script src="js/vendor/pinyin-pro.js?v=20261119"></script>
+  <script src="js/hand-ui.js?v=20261119"></script>
+  <script src="js/serial.js?v=20261119"></script>
+  <script src="js/encoder.js?v=20261119"></script>
+  <script src="js/curriculum.js?v=20261119"></script>
+  <script src="js/progress.js?v=20261119"></script>
+  <script src="js/lesson.js?v=20261119"></script>
+</body>
+</html>

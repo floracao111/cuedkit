@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+Icon?
+._*
+
+# Editors and tools
+.claude/
+.vscode/
+.idea/
+
+# Dependencies and build output
+node_modules/
+__pycache__/
+*.pyc
+
+# Third-party 3D files. TLPOD's hand design is under a MakerWorld commercial license
+# that does not allow sharing the files or derivatives. Never commit them.
+*.3mf
+*.stl
+!hardware/**/*.stl
+
+# Raw phone clips (large, unedited)
+docs/assembly-videos/originals/

@@ -1,0 +1,27 @@
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+
+Copyright (c) 2026 Flora Cao
+
+This license covers the original, non-code material in this repository: the course
+images and illustrations, the face sheet, the assembly videos and their captions, and
+any original hardware designs under hardware/.
+
+You are free to share and adapt this material for any purpose, including commercially,
+as long as you give appropriate credit and distribute your changes under the same license.
+
+Full legal text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+The source code (website and Arduino programs) is covered by the MIT license in LICENSE.
+Third-party material (including the two servo product photos) keeps its own license: see CREDITS.md. The finger mechanism design
+by TLPOD is NOT part of this repository and is NOT covered by this license.
+
+---
+
+中文说明（以上英文条款为准）：
+
+本许可适用于本仓库中的原创非代码内容：课程图片和插图、脸部图、组装视频及其说明文字，
+以及 hardware/ 下的原创硬件设计。只要署名，并以相同许可发布你的修改版本，
+你就可以出于任何目的（包括商业用途）分享和改编这些内容。
+
+源代码（网站和 Arduino 程序）使用 LICENSE 中的 MIT 许可。第三方内容（包括两张舵机产品图）
+保留其各自的许可，见 CREDITS.md。TLPOD 的手指机构设计不属于本仓库，也不适用本许可。

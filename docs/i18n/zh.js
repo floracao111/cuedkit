@@ -1,0 +1,88 @@
+// Chinese dictionary for general (non Cued-Speech) pages.
+window.I18N_ZH = {
+  'common.siteName': 'Cued Kit',
+
+  'nav.about': '关于',
+  'nav.faq': '常见问题',
+  'nav.contact': '联系我们',
+
+  'banner.browserWarning': '本网站的机械手控制功能需要在电脑端使用 Google Chrome 或 Microsoft Edge 浏览器。其他浏览器（Safari、Firefox、手机浏览器）不受支持。',
+
+  'index.heroSubtitle': '一台教你“看懂”普通话线索语的机械手。',
+  'index.ctaButton': '开始使用',
+
+  'stepper.download': '套件',
+  'stepper.handAssembly': '手部组装',
+  'stepper.armAssembly': '手臂组装',
+  'stepper.use': '课程',
+
+  'download.title': '获取套件',
+  'download.orderButton': '订购',
+  'download.continueButton': '继续前往手部组装',
+
+  'assembly.kitTitle': '零件',
+  'assembly.alsoNeedTitle': '工具',
+  'assembly.diyNote': '完整清单见',
+  'assembly.diyLink': '套件页面',
+  'assembly.videoSoon': '视频不可用',
+  'assembly.close': '关闭',
+  'assembly.imageSoon': '图片不可用',
+  'assembly.play': '播放视频',
+  'assembly.stop': '停止视频',
+
+  'hand.title': '手部组装',
+  'hand.congrats': '恭喜，机械手组装完成！',
+  'hand.continueButton': '继续前往手臂组装',
+
+  'arm.title': '手臂组装',
+  'arm.continueButton': '继续前往使用',
+
+  'connect.title': '连接机械手',
+  'connect.browserNote': '连接功能需要在电脑端使用 Google Chrome 或 Microsoft Edge 浏览器。',
+  'connect.connectButton': '连接',
+  'connect.troubleshootingTitle': '故障排除',
+  'connect.tip1': '请确认机械手已通过 USB 线连接到电脑。',
+  'connect.tip2': '请使用 Google Chrome 或 Microsoft Edge —— 其他浏览器不支持 Web Serial API。',
+  'connect.tip3': '如果端口没有出现，请尝试更换 USB 线或接口。',
+  'connect.startButton': '开始学习',
+  'connect.disconnectButton': '断开连接',
+  'connect.status.disconnected': '未连接。',
+  'connect.status.connecting': '正在连接…机械手会短暂重启。',
+  'connect.status.connected': '已连接，机械手已就绪。',
+  'connect.error.busy': '无法打开端口。请关闭 Arduino 串口监视器或其他占用该端口的程序，然后重试。',
+  'connect.error.noResponse': '设备没有像机械手那样回应。请确认已上传 CuedKit 程序，并选择了 Arduino 的端口。',
+  'connect.error.lost': '连接已断开。请检查 USB 线，然后重新连接。',
+
+  'calibrate.title': '校准机械手',
+  'calibrate.continueButton': '返回手部组装',
+
+  'about.title': '关于本项目',
+  'about.missionTitle': '项目使命',
+  'about.missionText': '这是一个低成本的开源教育机械手套件。每套套件包含 3D 打印的手和手臂、舵机和电子元件。你自己动手组装，也可以随意改造：Arduino 程序和网络课程是开源的，你可以改变机械手的动作和课程的内容。',
+  'about.cuedSpeechTitle': '线索语',
+  'about.cuedSpeechText': '本套件围绕普通话线索语（Mandarin Cued Speech）设计——一种用手型、位置和口型让普通话"看得见"的视觉系统。',
+  'about.cuedSpeechLink': '了解更多关于线索语 →',
+  'about.nextTitle': '下一步',
+  'about.nextText': '我们正在开发原创*手指机构*，让整只手可以完全开源，任何人都可以免费下载并打印。',
+  'about.creditsTitle': '致谢',
+  'about.creditsText': '手指机构改编自 TLPOD 的 Overengineered Mechanical Hand V2（授权设计）。打印的手部在 TLPOD 的商业打印授权下制作。',
+  'about.creditsLink': '在 MakerWorld 查看原作 →',
+  'about.creditsProfile': 'TLPOD 的 MakerWorld 主页 →',
+
+  'faq.title': '常见问题',
+  'faq.q0': '应该从哪里开始？',
+  'faq.a0': '点击首页的"开始"按钮，接下来会依次带你查看零件清单、订购套件，然后完成手部和手臂组装，最后进入"使用"课程。',
+  'faq.q1': '为什么"连接"按钮点了没反应？',
+  'faq.a1': '连接机械手所用的 Web Serial API 仅支持电脑端的 Google Chrome 和 Microsoft Edge 浏览器，Safari、Firefox 及手机浏览器均不支持。',
+  'faq.q2': '某个舵机动作不正常，该怎么检查？',
+  'faq.a2': '连接机械手后，在“连接”页面逐个按一按手型和位置。如果某个手指没有完全伸直或弯下去，或者舵机发出“嗡嗡”声（说明用力过头了），就修改 cuedkit-speech Arduino 程序开头的数字（程序在套件页面的固件压缩包里），然后重新上传。',
+  'faq.q3': '组装说明和零件清单在哪里？',
+  'faq.a3': '套件页面有零件清单、需要打印的脸部图和 Arduino 代码。手部组装和手臂组装页面用短视频展示每一步。请从“开始”进入。',
+  'faq.q4': '套件里有什么？怎么获得？',
+  'faq.a4': '套件包含你需要的一切：3D 打印的手和手臂、舵机、Arduino 和驱动板、杜邦线和电源。由我打印、打包后寄给你。在套件页面点“订购”即可。',
+
+  'contact.title': '联系我们',
+  'contact.intro': '欢迎提出问题、反馈或报告错误。',
+  'contact.orderText': '想要一套套件？点“订购”，填写你的姓名、所在国家，以及用途即可。',
+  'contact.orderButton': '订购',
+};

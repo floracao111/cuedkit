@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>说话 — Speak</title>
+  <link rel="stylesheet" href="css/style.css?v=20261119">
+  <link rel="stylesheet" href="css/learn.css?v=20261119">
+  <script src="js/lang.js?v=20261119"></script>
+</head>
+<body class="center-page" data-step="speak">
+  <header class="site-header">
+    <a class="site-logo" href="index.html" aria-label="Cued Kit">Cued Kit</a>
+    <div class="header-actions">
+      <a class="header-link" href="use.html"><span class="zh">课程</span><span class="en">Course</span></a>
+      <a class="device-btn" href="connect.html"><span class="zh">连接</span><span class="en">Connect</span></a>
+    </div>
+  </header>
+
+  <nav id="learn-nav" class="stepper"></nav>
+
+  <main>
+    <div class="hero">
+      <h1 class="hero-title"><span class="zh">说话</span><span class="en">Speak</span></h1>
+    </div>
+
+    <section class="speak-panel">
+      <div class="speak-compose">
+        <label class="visually-hidden" for="speak-input"><span class="zh">输入中文或拼音</span><span class="en">Type Chinese or pinyin</span></label>
+        <input id="speak-input" class="speak-input" type="text" maxlength="200" autocomplete="off" spellcheck="false"
+               data-placeholder-zh="输入中文或拼音" data-placeholder-en="Type Chinese or pinyin">
+        <div class="button-row">
+          <button type="button" class="btn" id="speak-btn"><span class="zh">说</span><span class="en">Speak</span></button>
+          <button type="button" class="btn btn-secondary" id="stop-btn" disabled><span class="zh">停止</span><span class="en">Stop</span></button>
+        </div>
+      </div>
+
+      <p id="speak-status" class="speak-status" role="status" aria-live="polite"></p>
+
+      <div id="speak-chips" class="speak-chips" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="js/learn-nav.js?v=20261119"></script>
+  <script src="js/vendor/pinyin-pro.js?v=20261119"></script>
+  <script src="js/hand-ui.js?v=20261119"></script>
+  <script src="js/serial.js?v=20261119"></script>
+  <script src="js/encoder.js?v=20261119"></script>
+  <script src="js/speak.js?v=20261119"></script>
+</body>
+</html>

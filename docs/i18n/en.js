@@ -1,0 +1,88 @@
+// English dictionary for general (non Cued-Speech) pages.
+window.I18N_EN = {
+  'common.siteName': 'Cued Kit',
+
+  'nav.about': 'About',
+  'nav.faq': 'FAQ',
+  'nav.contact': 'Contact',
+
+  'banner.browserWarning': 'This site’s hand-control features require Google Chrome or Microsoft Edge on a desktop computer. Other browsers (Safari, Firefox, mobile browsers) are not supported.',
+
+  'index.heroSubtitle': 'A robotic hand that teaches Mandarin Cued Speech.',
+  'index.ctaButton': 'Get Started',
+
+  'stepper.download': 'Kit',
+  'stepper.handAssembly': 'Hand assembly',
+  'stepper.armAssembly': 'Arm assembly',
+  'stepper.use': 'Course',
+
+  'download.title': 'Get Your Kit',
+  'download.orderButton': 'Order',
+  'download.continueButton': 'Continue to Hand Assembly',
+
+  'assembly.kitTitle': 'Parts',
+  'assembly.alsoNeedTitle': 'Tools',
+  'assembly.diyNote': 'Everything is listed on the',
+  'assembly.diyLink': 'Kit page',
+  'assembly.videoSoon': 'Video not available',
+  'assembly.close': 'Close',
+  'assembly.imageSoon': 'Image not available',
+  'assembly.play': 'Play video',
+  'assembly.stop': 'Stop video',
+
+  'hand.title': 'Hand assembly',
+  'hand.congrats': 'Congrats on assembling the hand!',
+  'hand.continueButton': 'Continue to arm assembly',
+
+  'arm.title': 'Arm assembly',
+  'arm.continueButton': 'Continue to Use',
+
+  'connect.title': 'Connect Your Hand',
+  'connect.browserNote': 'Connecting requires Google Chrome or Microsoft Edge on a desktop computer.',
+  'connect.connectButton': 'Connect',
+  'connect.troubleshootingTitle': 'Troubleshooting',
+  'connect.tip1': 'Make sure the hand is connected to your computer with a USB cable.',
+  'connect.tip2': 'Use Google Chrome or Microsoft Edge — other browsers do not support the Web Serial API.',
+  'connect.tip3': 'If the port does not appear, try a different USB cable or port.',
+  'connect.startButton': 'Start the course',
+  'connect.disconnectButton': 'Disconnect',
+  'connect.status.disconnected': 'Not connected.',
+  'connect.status.connecting': 'Connecting… the hand restarts for a moment.',
+  'connect.status.connected': 'Connected. The hand is ready.',
+  'connect.error.busy': 'Could not open the port. Close the Arduino Serial Monitor or any other program using it, then try again.',
+  'connect.error.noResponse': 'The device did not answer like the hand. Make sure the CuedKit sketch is uploaded and that you picked the Arduino’s port.',
+  'connect.error.lost': 'The connection was lost. Check the USB cable, then connect again.',
+
+  'calibrate.title': 'Calibrate Your Hand',
+  'calibrate.continueButton': 'Back to hand assembly',
+
+  'about.title': 'About This Project',
+  'about.missionTitle': 'Mission',
+  'about.missionText': 'This is a low-cost, open-source robotic hand kit built for education. Each kit includes the 3D-printed hand and arm, the servos and the electronics. You assemble it yourself, and it is yours to modify: the Arduino code and the web course are open source, so you can change how the hand moves and what it teaches.',
+  'about.cuedSpeechTitle': 'Cued Speech',
+  'about.cuedSpeechText': 'This kit is built around Mandarin Cued Speech, a visual system that makes spoken Mandarin visible through handshapes, hand positions, and mouth shapes.',
+  'about.cuedSpeechLink': 'Read more about Cued Speech →',
+  'about.nextTitle': 'What’s next',
+  'about.nextText': 'We are developing original *finger mechanics* so the whole hand can be fully open source, free for anyone to download and print.',
+  'about.creditsTitle': 'Credits',
+  'about.creditsText': 'The finger mechanism is adapted from Overengineered Mechanical Hand V2, a licensed design by TLPOD. Printed hands are made under TLPOD’s commercial printing license.',
+  'about.creditsLink': 'View the original on MakerWorld →',
+  'about.creditsProfile': 'TLPOD on MakerWorld →',
+
+  'faq.title': 'Frequently Asked Questions',
+  'faq.q0': 'How do I get started?',
+  'faq.a0': 'Click "Get Started" on the homepage. You’ll be guided through the parts list and ordering your kit, then assembling the hand and arm, and land on the "Use" course at the end.',
+  'faq.q1': 'Why won’t the Connect button work?',
+  'faq.a1': 'The Web Serial API used to connect to the hand is only supported in Google Chrome and Microsoft Edge on desktop. It does not work in Safari, Firefox, or on mobile browsers.',
+  'faq.q2': 'A servo isn’t moving correctly. What should I check?',
+  'faq.a2': 'Connect your hand and press every handshape and position on the Connect page. If a finger does not open or close all the way, or a servo hums (it is pushing too hard), change the numbers at the top of the cuedkit-speech Arduino program (it is in the firmware zip on the Kit page), then upload it again.',
+  'faq.q3': 'Where are the assembly instructions and the parts list?',
+  'faq.a3': 'On the Kit page you will find the parts list, the face sheet to print and the Arduino code. The Hand assembly and Arm assembly pages show every step in short videos. Start from Get Started.',
+  'faq.q4': 'What is in the kit, and how do I get one?',
+  'faq.a4': 'The kit has everything you need: the 3D-printed hand and arm, the servos, the Arduino and the driver board, the wires and the power supply. I print, pack and send it to you. Press Order on the Kit page to get one.',
+
+  'contact.title': 'Contact',
+  'contact.intro': 'Questions, feedback, or bug reports are welcome.',
+  'contact.orderText': 'Want a kit? Press Order and fill in your name, country and what you will use it for.',
+  'contact.orderButton': 'Order',
+};
