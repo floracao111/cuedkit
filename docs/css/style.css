@@ -977,3 +977,21 @@ body[data-step="hand-assembly"] main, body[data-step="arm-assembly"] main { max-
 
 /* keep the connected dot on the same line as the label */
 .device-btn { display: inline-flex; align-items: center; }
+
+/* the Order pop-up (js/order.js) */
+.order-dialog { width: min(92vw, 30rem); border-radius: 18px; }
+.order-body { padding: 2.25rem 2rem 2rem; display: flex; flex-direction: column; gap: 1rem; text-align: center; }
+.order-title { margin: 0; font-size: 1.5rem; }
+.order-text { margin: 0; color: var(--text-secondary); line-height: 1.6; }
+.order-address {
+  margin: 0.25rem 0;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  word-break: break-all;
+  user-select: all;
+}
+.order-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }

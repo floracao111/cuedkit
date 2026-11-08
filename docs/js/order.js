@@ -1,6 +1,10 @@
-// Kit orders without a form or a server: the "Order" button opens the visitor's email app with a message
-// ready to fill in (name, country, use, how many), in the language they are reading.
-// The address comes from js/site-config.js. Needs i18n.js (getLanguage) loaded first.
+// Kit orders without a form or a server: the "Order" button opens a small pop-up with the
+// email address (to read or copy) and a button that opens the visitor's email app with a
+// message ready to fill in (name, country, use, how many), in the language they are reading.
+//
+// The address comes from js/site-config.js in two pieces and is only put together, and
+// written into the page, when someone clicks Order. That keeps it out of the page's plain
+// text, where simple email-harvesting bots look. Needs i18n.js (getLanguage, t) loaded first.
 
 const ORDER_MESSAGE = {
   subject: { en: 'CuedKit order', zh: '订购 CuedKit 套件' },
@@ -24,6 +28,11 @@ const ORDER_MESSAGE = {
   },
 };
 
+function orderEmail() {
+  const parts = window.SITE_EMAIL_PARTS;
+  return Array.isArray(parts) && parts.length === 2 ? parts.join('@') : '';
+}
+
 function orderHref(email) {
   const lang = getLanguage() === 'zh' ? 'zh' : 'en';
   const subject = encodeURIComponent(ORDER_MESSAGE.subject[lang]);
@@ -31,24 +40,85 @@ function orderHref(email) {
   return 'mailto:' + email + '?subject=' + subject + '&body=' + body;
 }
 
+function orderNode(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+
+function copyText(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    return navigator.clipboard.writeText(text);
+  }
+  return Promise.reject(new Error('no clipboard'));
+}
+
+function openOrderDialog() {
+  const email = orderEmail();
+  let dialog = document.getElementById('order-dialog');
+  if (!dialog) {
+    dialog = document.createElement('dialog');
+    dialog.id = 'order-dialog';
+    dialog.className = 'image-dialog order-dialog';
+    dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+    document.body.appendChild(dialog);
+  }
+  dialog.textContent = '';
+
+  const close = orderNode('button', 'image-dialog-close', '×');
+  close.type = 'button';
+  close.setAttribute('aria-label', t('assembly.close'));
+  close.addEventListener('click', () => dialog.close());
+
+  const body = orderNode('div', 'order-body');
+  body.appendChild(orderNode('h2', 'order-title', t('order.title')));
+  body.appendChild(orderNode('p', 'order-text', t('order.text')));
+
+  if (email) {
+    const address = orderNode('p', 'order-address', email);
+    body.appendChild(address);
+
+    const row = orderNode('div', 'order-actions');
+    const copy = orderNode('button', 'btn btn-secondary btn-sm', t('order.copy'));
+    copy.type = 'button';
+    copy.addEventListener('click', () => {
+      copyText(email).then(
+        () => { copy.textContent = t('order.copied'); },
+        () => {
+          // no clipboard access: select the address so it can be copied by hand
+          const range = document.createRange();
+          range.selectNodeContents(address);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+        }
+      );
+    });
+    const open = orderNode('a', 'btn btn-sm', t('order.open'));
+    open.href = orderHref(email);
+    row.append(copy, open);
+    body.appendChild(row);
+  }
+
+  dialog.append(close, body);
+  dialog.showModal();
+}
+
 function setupOrderLinks() {
-  const email = String(window.SITE_EMAIL || '').trim();
-  // with an address: opens a ready-to-fill email. Without one, a button that has a
-  // data-order-fallback goes to that page instead (the others stay hidden).
   document.querySelectorAll('[data-order]').forEach((a) => {
-    const fallback = a.getAttribute('data-order-fallback');
-    a.hidden = !email && !fallback;
-    if (email) a.href = orderHref(email);
-    else if (fallback) a.href = fallback;
-  });
-  document.querySelectorAll('[data-email]').forEach((a) => {
-    a.hidden = !email;
-    if (email) {
-      a.href = 'mailto:' + email;
-      a.textContent = email;
-    }
+    if (a.dataset.orderReady) return;
+    a.dataset.orderReady = '1';
+    // without JavaScript the link still goes to its href (the Contact page)
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      openOrderDialog();
+    });
   });
 }
 
 document.addEventListener('DOMContentLoaded', setupOrderLinks);
-document.addEventListener('languagechange', setupOrderLinks);
+document.addEventListener('languagechange', () => {
+  const dialog = document.getElementById('order-dialog');
+  if (dialog && dialog.open) dialog.close();
+});

@@ -86,4 +86,10 @@ window.I18N_ZH = {
   'contact.intro': '欢迎提出问题、反馈或报告错误。',
   'contact.orderText': '想要一套套件？点“订购”，填写你的姓名、所在国家，以及用途即可。',
   'contact.orderButton': '订购',
+
+  'order.title': '订购套件',
+  'order.text': '请给我发一封邮件，写上你的姓名、所在国家、用途，以及想要几套。我会回复你。',
+  'order.copy': '复制邮箱地址',
+  'order.copied': '已复制',
+  'order.open': '打开邮件应用',
 };

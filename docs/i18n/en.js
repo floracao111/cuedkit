@@ -86,4 +86,10 @@ window.I18N_EN = {
   'contact.intro': 'Questions, feedback, or bug reports are welcome.',
   'contact.orderText': 'Want a kit? Press Order and fill in your name, country and what you will use it for.',
   'contact.orderButton': 'Order',
+
+  'order.title': 'Order a kit',
+  'order.text': 'Send me an email with your name, country, what you will use it for, and how many kits you want. I will reply to you.',
+  'order.copy': 'Copy address',
+  'order.copied': 'Copied',
+  'order.open': 'Open email app',
 };
