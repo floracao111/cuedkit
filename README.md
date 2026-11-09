@@ -23,7 +23,7 @@ Mandarin-speaking learners.
 - **A course that uses the robot to teach.** Thirteen lessons run in the browser and
   drive the hand over USB, so learners see each handshape and position as they study it.
 - **A kit others can build and reuse.** Parts list, assembly videos, firmware and arm
-  models are published, and the kit is sold at the cost of materials.
+  models are published, and the kit is available at the cost of materials.
 
 ## What is in this repository
 
