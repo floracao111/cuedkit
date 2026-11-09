@@ -67,7 +67,6 @@ window.I18N_ZH = {
   'about.nextText': '我们正在开发原创*手指机构*，让整只手可以完全开源，任何人都可以免费下载并打印。',
   'about.creditsTitle': '致谢',
   'about.creditsText': '手指机构改编自 TLPOD 的 Overengineered Mechanical Hand V2（授权设计）。打印的手部在 TLPOD 的商业打印授权下制作。',
-  'about.creditsLink': '在 MakerWorld 查看原作 →',
   'about.creditsProfile': 'TLPOD 的 MakerWorld 主页 →',
 
   'faq.title': '常见问题',

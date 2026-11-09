@@ -67,7 +67,6 @@ window.I18N_EN = {
   'about.nextText': 'We are developing original *finger mechanics* so the whole hand can be fully open source, free for anyone to download and print.',
   'about.creditsTitle': 'Credits',
   'about.creditsText': 'The finger mechanism is adapted from Overengineered Mechanical Hand V2, a licensed design by TLPOD. Printed hands are made under TLPOD’s commercial printing license.',
-  'about.creditsLink': 'View the original on MakerWorld →',
   'about.creditsProfile': 'TLPOD on MakerWorld →',
 
   'faq.title': 'Frequently Asked Questions',
